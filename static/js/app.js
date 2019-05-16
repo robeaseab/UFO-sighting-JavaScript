@@ -38,6 +38,7 @@ function formClick(){
   // get value of search input
   var formInput = d3.select("#search-criteria");
   var inputValue = formInput.property("value").toLowerCase();
+  console.log(inputValue);
   
   // get data.entryValue
   if (entryValue == "datetime") {
@@ -64,7 +65,7 @@ function formClick(){
   // };
   
   console.log(filteredData);
-  console.log(inputValue);
+  
 
   filteredData.forEach((sighting) => {
     var row = tbody.append("tr");
