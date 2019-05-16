@@ -33,10 +33,11 @@ function formClick(){
   // get value of drop down choice
   var entryType = d3.select("#select-filter");
   var entryValue = entryType.property("value");
+  console.log(entryValue);
 
   // get value of search input
   var formInput = d3.select("#search-criteria");
-  var inputValue = formInput.property("value");
+  var inputValue = formInput.property("value").toLowerCase();
   
   // get data.entryValue
   if (entryValue == "datetime") {
@@ -58,10 +59,12 @@ function formClick(){
     console.log("error");
   }
   
-  
+  // if (filteredData = []) {
+  //   alert("Sorry, no results were found.  Check your search and try again");
+  // };
   
   console.log(filteredData);
-  console.log(entryValue);
+  console.log(inputValue);
 
   filteredData.forEach((sighting) => {
     var row = tbody.append("tr");
