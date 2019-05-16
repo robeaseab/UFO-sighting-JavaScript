@@ -35,7 +35,17 @@
               <div class="panel-body">
                 <form>
                   <div class="form-group">
-                    <ul class="list-group" id="filters">
+                    
+                      <select id="select-filter">
+                          <option value="options">Select Filter...</option>
+                          <option value="datetime">Date</option>
+                          <option value="city">City</option>
+                          <option value="state">State</option>
+                          <option value="country">Country</option>
+                          <option value="shape">Shape</option>
+                      </select>
+
+                    <!-- <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="search-criteria" type="text" placeholder="1/11/2011">
@@ -56,6 +66,13 @@
                         <label for="shape">Enter Shape</label>
                         <input class="form-control" id="search-criteria" type="text" placeholder="triangle">
                       </li>
+                    </ul> -->
+
+                    <ul class="list-group" id="filters">
+                        <li class="filter list-group-item">
+                          <label for="date">Enter a Date</label>
+                          <input class="form-control" id="search-criteria" type="text" placeholder="enter search">
+                        </li>
                     </ul>
                   </div>
                   <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
@@ -88,6 +105,7 @@
     </div>
     <footer class="footer">
       <span class="bottom">UFO Sightings</span>
+      <a href="https://www.thoughtco.com/ufo-photographs-4123245" >Image Source Credit</a>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
