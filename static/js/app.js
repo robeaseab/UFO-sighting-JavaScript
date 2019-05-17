@@ -39,6 +39,7 @@ function formClick(){
   var formInput = d3.select("#search-criteria");
   var inputValue = formInput.property("value").toLowerCase();
   console.log(inputValue);
+
   
   // get data.entryValue
   if (entryValue == "datetime") {
@@ -60,13 +61,12 @@ function formClick(){
     console.log("error");
   }
   
-  // if (filteredData = []) {
-  //   alert("Sorry, no results were found.  Check your search and try again");
-  // };
+  if (filteredData.length == 0) {
+    alert("Sorry, no results were found.  Check your search and try again");
+  };
   
   console.log(filteredData);
   
-
   filteredData.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
